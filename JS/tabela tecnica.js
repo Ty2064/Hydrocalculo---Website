@@ -1,62 +1,60 @@
-// Cria e adiciona 5 tabelas ao document.body
-function createTable(title, rows, cols) {
-	const container = document.createElement('div');
-	container.style.margin = '12px 0';
+/*
+    Tabelas técnicas do HydroCálculo.
+    Fórmula aplicada no perguntas.js:
+    água mensal (L) = consultas semanais × energia por consulta (kWh) × WUE do cenário × 4,345
+*/
 
-	const heading = document.createElement('h3');
-	heading.textContent = title;
-	heading.style.fontFamily = 'Arial, sans-serif';
-	heading.style.margin = '6px 0';
-	container.appendChild(heading);
+const TABELAS_HYDRO = {
+    frequenciaSemanal: {
+        nunca: 0,
+        umaDuas: 1.5,
+        tresQuatro: 3.5,
+        cincoSeis: 5.5,
+        todosDias: 7
+    },
 
-	const table = document.createElement('table');
-	table.style.borderCollapse = 'collapse';
-	table.style.minWidth = '320px';
-	table.style.fontFamily = 'Arial, sans-serif';
+    tempoPorUsoMinutos: {
+        ate10: 10,
+        dezTrinta: 20,
+        trintaSessenta: 45,
+        maisUmaHora: 75
+    },
 
-	// header
-	const thead = document.createElement('thead');
-	const hrow = document.createElement('tr');
-	for (let c = 1; c <= cols; c++) {
-		const th = document.createElement('th');
-		th.textContent = 'Col ' + c;
-		th.style.border = '1px solid #666';
-		th.style.padding = '6px 10px';
-		th.style.background = '#f0f0f0';
-		hrow.appendChild(th);
-	}
-	thead.appendChild(hrow);
-	table.appendChild(thead);
+    consultasPorMinuto: {
+        simples: 1.2,
+        textos: 0.7,
+        programacao: 0.45,
+        video: 0.08,
+        imagem: 0.12
+    },
 
-	// body
-	const tbody = document.createElement('tbody');
-	for (let r = 1; r <= rows; r++) {
-		const row = document.createElement('tr');
-		for (let c = 1; c <= cols; c++) {
-			const td = document.createElement('td');
-			td.textContent = `R${r}C${c}`;
-			td.style.border = '1px solid #ccc';
-			td.style.padding = '6px 10px';
-			row.appendChild(td);
-		}
-		tbody.appendChild(row);
-	}
-	table.appendChild(tbody);
+    tokensPorPrompt: {
+        curto: 300,
+        medio: 900,
+        longo: 1800
+    },
 
-	container.appendChild(table);
-	return container;
-}
+    multiplicadorTarefa: {
+        simples: 1.0,
+        textos: 1.8,
+        programacao: 2.4,
+        video: 8.0,
+        imagem: 5.0
+    },
 
-// Gerar 5 tabelas diferentes
-const tables = [
-	{title: 'Tabela 1 — Dados Básicos', rows: 3, cols: 4},
-	{title: 'Tabela 2 — Estatísticas', rows: 4, cols: 3},
-	{title: 'Tabela 3 — Plano', rows: 5, cols: 5},
-	{title: 'Tabela 4 — Resumo', rows: 2, cols: 6},
-	{title: 'Tabela 5 — Extras', rows: 6, cols: 2},
-];
+    modelos: {
+        chatgpt: { nome: "ChatGPT", whPorMilTokens: 0.8 },
+        claude: { nome: "Claude", whPorMilTokens: 0.75 },
+        gemini: { nome: "Gemini", whPorMilTokens: 0.7 },
+        perplexity: { nome: "Perplexity", whPorMilTokens: 0.85 },
+        outro: { nome: "Outro modelo", whPorMilTokens: 0.8 }
+    },
 
-window.addEventListener('DOMContentLoaded', () => {
-	const root = document.body || document.documentElement;
-	tables.forEach(cfg => root.appendChild(createTable(cfg.title, cfg.rows, cfg.cols)));
-});
+    cenariosGeograficos: {
+        brasil: { nome: "Brasil", pue: 1.25, wueLitrosPorKwh: 0.30 },
+        americaSul: { nome: "América do Sul", pue: 1.35, wueLitrosPorKwh: 0.50 },
+        azureGlobal: { nome: "Fora da América do Sul / Azure", pue: 1.45, wueLitrosPorKwh: 0.80 }
+    },
+
+    semanasPorMes: 4.345
+};

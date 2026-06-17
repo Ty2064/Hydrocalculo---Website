@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background: linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.9)), url("../Images/background image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.site-header {
+    min-height: 64px;
+    padding: 12px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.38);
+    border-bottom: 1px solid rgba(54, 79, 107, 0.22);
+    backdrop-filter: blur(8px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #111827;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand-logo {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.site-nav ul { list-style: none; margin: 0; padding: 0; }
+.site-nav a { color: #111827; text-decoration: none; font-weight: 600; }
+.site-nav a:hover { text-decoration: underline; }
+
+.about-page {
+    min-height: calc(100vh - 64px);
+    padding: 80px 8vw;
+}
+
+.about-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 36px 44px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(54, 79, 107, 0.28);
+    border-radius: 4px;
+    line-height: 1.65;
+}
