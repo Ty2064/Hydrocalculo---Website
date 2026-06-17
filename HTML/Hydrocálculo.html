@@ -24,33 +24,41 @@
         "@type": "WebSite",
         "name": "HydroCálculo",
         "url": "https://"URL_DA_PÁGINA",
-        "InLanguage": "pt-br",
-        "description": "HydroCálculo; calculando o quanto alguém gasta de água com IA.",
+        "inLanguage": "pt-BR",
+        "description": "HydroCálculo; calculando o quanto alguém gasta de água com IA."
         }
         </script>
     </head>
     <body>
-        <header>                                                            <!--cabeçalho do site -->
-            <img src="../Images/favicon.png" alt="Favicon" width="4%">            <!-- Logo do site --> 
+        <header class="site-header">                                             <!--cabeçalho do site -->
+            <a href="Hydrocálculo.html" class="brand">
+            <img src="../Images/Logo.png" alt="Logoicon" width="14%">      <!-- Logo do site -->
+            </a>              
             
             <nav>
                 <ul>
-                    <li><a href="Sobre nós.html">Sobre Nós</a></li>  
+                    <li><a href="Hydrocálculo.html">Home</a></li>
+                    <li><a href="Sobre nós.html">Sobre Nós</a></li> 
                 </ul>
             </nav>
         </header>
-        <main class="screen">          
-            <h2>Aqui você pode descobrir o quanto as suas perguntas aos famosos chatbots custam de água e impactam no planeta!</h2>
-            <h3>O impacto hídrico das IAs</h3>
-            <p>ipse lorem dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
-            
+        
+        <br><br>
+        
+        <main class="home">          
+            <section class="intro">
+                <h2>Aqui você pode descobrir o quanto as suas perguntas aos famosos chatbots custam de água e impactam no planeta!</h2>
+                <h3>O impacto hídrico das IAs</h3>
+                <p>ipse lorem dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
+            </section>
+            <br><br>
             <section class="question-box">
                 <p id="category"></p>
                 <h1 id="question-title">
                 </h1>
 
                 <form id="options-form">
-                     <!-- As alternativas entram aqui pelo JavaScript -->
+                     <!-- alternativas aqui pelo JavaScript -->
                 </form>
 
                 <button id="next-btn">Próxima</button>
