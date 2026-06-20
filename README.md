@@ -1,10 +1,11 @@
-# Hydrocálculo ![HydroCalculation Logo](images/favicon.png)
+# Hydrocálculo <img src="Images/favicon.png" alt="Logo" width="100">
 
+Software used for calculating the spent of water by the users of AI.
 
-Software used for calculating the spent of water by the users of AI
 Created by Terry & Andrey - Information Systems studants
 
-Methodology
+Methodology:
+
 The software combines the selected values from the five metrics and applies weighting factors derived from academic and technical studies on AI infrastructure, energy consumption, and water usage in data centers.
 The final result represents an estimated weekly water consumption associated with the user's AI activities.
 
