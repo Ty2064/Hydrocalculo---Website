@@ -1,4 +1,6 @@
-# Hydrocálculo
+# Hydrocálculo ![HydroCalculation Logo](images/favicon.png)
+
+
 Software used for calculating the spent of water by the users of AI
 Created by Terry & Andrey - Information Systems studants
 
