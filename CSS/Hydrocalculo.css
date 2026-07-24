@@ -29,16 +29,65 @@ body
   min-height: 100vh;
 
 }
-
+/* ======================== Cabeçalho ========================== */
 .site-header 
 {
-  position: sticky;
-  top: 0;
-  z-index: 50;
+  position: fixed;
+  top: 20px;
+  left: 0;
   width: 100%;
-  border-bottom: 1px solid var(--border);
-  background: rgba(13, 27, 46, 0.8);
-  backdrop-filter: blur(12px);
+  z-index: 1000;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.header-inner /* retângulo branco, centraliza a logo e alinha os links */
+{
+  max-width: 1100px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links
+ {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Personalização dos links */
+.nav-links a 
+{
+  display: block;
+  padding: 10px 15px;
+
+  color: #0b1d33;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 9px;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    transform 0.2s;
 }
 
 .brand 
@@ -46,9 +95,9 @@ body
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #111827;
     text-decoration: none;
     font-weight: 700;
+    flex-shrink: 0;
 }
 
 .brand-logo 
@@ -58,7 +107,14 @@ body
     object-fit: contain;
 }
 
-.site-nav ul 
+.brand img 
+{
+  display: block;
+  height: 50px;
+  width: auto;
+}
+
+.site-nav ul    
 {
     list-style: none;
     margin: 0;
@@ -77,61 +133,36 @@ body
     text-decoration: underline;
 }
 
-.home-page 
+/* ==================== Cabeçalho FIM =========================== */
+
+main
+{
+  padding-top: 110px;
+}
+
+
+.home 
 {
     min-height: calc(100vh - 128px);
     padding: 70px 8vw 60px;
 }
 
-.intro-section
-{
-    display: grid;
-    grid-template-columns: minmax(280px, 1.2fr) minmax(220px, 0.8fr);
-    gap: 48px;
-    align-items: center;
-    max-width: 1180px;
-    margin: 0 auto 56px;
-}
-
-.intro-text h1 
+.intro-h2 
 {
     max-width: 720px;
-    margin: 0 0 52px;
-    font-size: clamp(1.7rem, 3vw, 2.7rem);
-    line-height: 1.25;
-}
-
-.intro-text h2 
-{
-    margin: 0 0 10px;
+    margin: 0 auto;
     font-size: 1.25rem;
-}
-
-.intro-text p 
-{
-    max-width: 760px;
-    line-height: 1.55;
-}
-
-.hero-image 
-{
-    margin: 0;
     text-align: center;
 }
 
-.hero-image img 
+.intro-p 
 {
-    max-width: 260px;
-    width: 70%;
-    height: auto;
+    max-width: 760px;
+    line-height: 1.55;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.hero-image figcaption 
-{
-    margin-top: 8px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
 
 /* ==================== Quiz =========================== */
 .question-box 
@@ -306,14 +337,16 @@ body
   max-width: 28rem;
 }
 
-/* ==================== Quiz =========================== */
+/* ==================== Quiz FIM =========================== */
 
-.site-footer {
+.footer
+{
     min-height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 100px solid rgba(54, 79, 107, 0.22);
-    background: rgba(255, 255, 255, 0.46);
+    border-top: 100px solid rgba(12, 56, 107, 0.22);
+    background: rgba(12, 43, 129, 0.46);
+
 }
 

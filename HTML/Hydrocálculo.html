@@ -31,28 +31,48 @@
     </head>
     <body>
         <header class="site-header">                                             <!--cabeçalho do site -->
-            <a href="Hydrocálculo.html" class="brand">
-            <img src="../Images/Logo.png" alt="Logoicon" width="14%">      <!-- Logo do site -->
-            </a>              
-            
-            <nav>
-                <ul>
-                    <li><a href="Hydrocálculo.html">Home</a></li>
-                    <li><a href="Sobre nós.html">Sobre Nós</a></li> 
-                </ul>
-            </nav>
+            <div class="header-inner">
+                <a href="Hydrocálculo.html" class="brand">
+                <img src="../Images/Logo.png" alt="Logoicon" width="14%"> 
+                </a>           <!-- Logo do site --> 
+                <nav aria-label="Navegação principal" class="site-nav">
+                    <ul class="nav-links">
+                        <li><a href="Hydrocálculo.html">Home</a></li>
+                        <li><a href="Sobre nós.html">Sobre Nós</a></li> 
+                        <li><a href="Metodologia.html">Metodologia</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         
         <br><br>
         
         <main class="home">          
             <section class="intro">
-                <h2>Aqui você pode descobrir o quanto as suas perguntas aos famosos chatbots custam de água e impactam no planeta!</h2>
-                <h3>O impacto hídrico das IAs</h3>
-                <p>ipse lorem dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.</p>
+               <div class="intro-h2">
+                    <h2>
+                        Aqui você pode descobrir o quanto as suas perguntas
+                        aos famosos chatbots custam de água e impactam no planeta!
+                    </h2>
+               </div>  
+               
+               <br>
+               
+               <div class="intro-p">
+                    <p>
+                       ipse lorem dolor sit amet, consectetur adipiscing elit.
+                       Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula 
+                       ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et 
+                       diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta 
+                       lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem 
+                       ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.
+                    </p>
+               </div>
             </section>
+           
             <br><br>
-            <section class="question-box">
+           
+            <section class="question-box">                    <!-------- seção do quiz ---------> 
                 <p id="category"></p>
                 <h1 id="question-title"></h1>
                 <h3 class="question" id="q-question"></h3>
@@ -64,9 +84,10 @@
             </section>
         </main>
         
-        <footer>
+        <footer class="footer">
             <p>&copy; 2026 HydroCálculo.</p>
         </footer>
         <script src="../JS/perguntas.js"></script>             <!-- Link para o arquivo JavaScript -->
     </body>
+    
 </html>
