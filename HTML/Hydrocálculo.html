@@ -11,8 +11,9 @@
         <meta name="robots" content="index, follow">
     
         <!--Meta links-->   
-        <link rel="icon" href="../Images/favicon.png" type="image/x-png">
+        <link rel="icon" href="../Images/favicon.png" type="image/png">
         <link rel="stylesheet" href="../CSS/Hydrocalculo.css">                 <!-- Link para o arquivo CSS -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">       
         <link rel="canonical" href="URL_DA_PÁGINA">                      <!-- Link canônico para SEO -->
             
         <title>HydroCálculo</title>                <!--título-->
@@ -23,7 +24,7 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "HydroCálculo",
-        "url": "https://"URL_DA_PÁGINA",
+        "url": "https://URL_DA_PÁGINA",
         "inLanguage": "pt-BR",
         "description": "HydroCálculo; calculando o quanto alguém gasta de água com IA."
         }
@@ -45,8 +46,6 @@
             </div>
         </header>
         
-        <br><br>
-        
         <main class="home">          
             <section class="intro">
                <div class="intro-h2">
@@ -55,8 +54,6 @@
                         aos famosos chatbots custam de água e impactam no planeta!
                     </h2>
                </div>  
-               
-               <br>
                
                <div class="intro-p">
                     <p>
@@ -70,8 +67,7 @@
                </div>
             </section>
            
-            <br><br>
-           
+                      
             <section class="question-box">                    <!-------- seção do quiz ---------> 
                 <p id="category"></p>
                 <h1 id="question-title"></h1>
@@ -80,13 +76,19 @@
                      <!-- alternativas aqui pelo JavaScript -->
                 </form>
 
-                <button id="next-btn">Próxima</button>
+                <button class="btn" id="next-btn">
+                    <span id="btn-text">Próxima</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                        <path d="M13.207 19.793a.707.707 0 0 1-1.207-.5V16a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1V4.707a.707.707 0 0 1 1.207-.5l6.94 6.94a1.207 1.207 0 0 1 0 1.707z"/>
+                    </svg>
+                </button>
             </section>
         </main>
         
         <footer class="footer">
             <p>&copy; 2026 HydroCálculo.</p>
         </footer>
+        <script src="../JS/tabelas.js"></script>
         <script src="../JS/perguntas.js"></script>             <!-- Link para o arquivo JavaScript -->
     </body>
     

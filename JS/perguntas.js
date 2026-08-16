@@ -69,6 +69,7 @@ const category = document.getElementById("category");
 const questionTitle = document.getElementById("question-title");
 const optionsForm = document.getElementById("options-form");
 const nextBtn = document.getElementById("next-btn");
+const btnText = document.getElementById("btn-text");
 
 function showQuestion() {
     const question = questions[currentQuestion];
@@ -89,7 +90,7 @@ function showQuestion() {
         optionsForm.appendChild(label);
     });
 
-    nextBtn.textContent = currentQuestion === questions.length - 1 ? "Calcular" : "Próxima";
+   btnText.textContent = currentQuestion === questions.length - 1 ? "Calcular" : "Próxima";
 }
 
 function calcularGastoHidrico() {
@@ -137,7 +138,7 @@ function showResult() {
         </div>
     `;
 
-    nextBtn.textContent = "Refazer";
+    btnText.textContent = "Refazer";
     nextBtn.onclick = restartQuiz;
 }
 
